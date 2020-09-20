@@ -39,7 +39,7 @@ kubectl -n flux logs deployment/flux | grep identity.pub | cut -d '"' -f2
 
 # Install Helm Operator
 helm upgrade --install helm-operator \
-    --values deployments/flux/helm-operator/flux-helm-operator-values.yaml \
+    --values deployments/flux/helm-operator/helm-operator-values.yaml \
     --namespace flux \
     fluxcd/helm-operator
 

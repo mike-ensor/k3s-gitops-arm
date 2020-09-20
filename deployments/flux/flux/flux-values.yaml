@@ -1,10 +1,7 @@
 helmOperator:
   create: false
-#
-# @CHANGEME - Update url to your public repo URL
-#
 git:
-  url: "git@github.com:onedr0p/homelab-gitops.git"
+  url: "git@github.com:mike-ensor/flux-get-started.git"
   branch: master
   path: deployments
 image:
@@ -19,10 +16,10 @@ syncGarbageCollection:
   enabled: true
   dry: false
 # # Enabled once prometheus-operator is installed
-# prometheus:
-#   enabled: true
-#   serviceMonitor:
-#     create: false
-#     interval: 30s
-#     scrapeTimeout: 10s
-#     namespace: flux
+prometheus:
+  enabled: true
+  serviceMonitor:
+    create: false
+    interval: 30s
+    scrapeTimeout: 10s
+    namespace: flux
